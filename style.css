@@ -1,0 +1,77 @@
+body{
+    max-width: 1570px;
+    min-width: 320px
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho{
+    display: flex;
+    background-color: orange;
+    grid-area: cabecalho;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    grid-area: menu;
+    align-items: baseline;
+    justify-content: right;
+}
+
+.secao-principal{
+    background-color: pink;
+    grid-area: secao-principal;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    background-color: gold;
+    grid-area: aside;
+
+}
+
+.rodape{
+    display: flex;
+    background-color: red;
+    grid-area: rodape;
+}
+
+.container{
+    display: grid;
+    grid: 
+    "cabecalho cabecalho cabecalho" 200px
+    "menu secao-principal aside" 1170px
+    "rodape rodape rodape" 200px / 200px 1170px 200px
+    ;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+
+.rectangle{
+    width: 130px;
+    height: 200px;
+    background-color: rgb(240, 58, 164);
+    border: 1px solid black;
+}
+
+.menu .rectangle{
+    transform: rotate(90deg);    
+
+}
+
+.aside .rectangle{
+    transform: rotate(90deg);    
+}
